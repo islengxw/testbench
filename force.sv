@@ -10,9 +10,11 @@ module test(d);
 endmodule
 
 module chip();
-  wire f;
-  dut dut1(.c (f));
-  test dut2(.d (f));
+  wire f1;
+  wire f2;
+  dut dut1(.c (f1));
+  test dut2(.d (f2));
+  assign f2=f1;
 endmodule
 
 module test_top();
